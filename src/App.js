@@ -5,6 +5,12 @@ function App() {
   const tellAJoke = async (e) => {
     await fetch('http://api.homie/joke/random');
   };
+  const startTheParty = async (e) => {
+    await fetch('http://api.homie/party/start');
+  };
+  const stopTheParty = async (e) => {
+    await fetch('http://api.homie/party/stop');
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -14,15 +20,9 @@ function App() {
         </p>
         <p>
           <button onClick={tellAJoke}>Tell a Joke</button>
+          <button onClick={startTheParty}>Start the Party</button>
+          <button onClick={stopTheParty}>Stop the Party</button>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
