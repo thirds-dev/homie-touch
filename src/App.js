@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const tellAJoke = async (e) => {
-    await fetch({ url: 'http://api.homie/joke/random' });
+    await fetch('http://api.homie/joke/random');
   };
   return (
     <div className="App">
